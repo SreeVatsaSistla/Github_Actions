@@ -1,0 +1,27 @@
+name: Main Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      mainParam1:
+        description: "Description for mainParam1"
+        type: string
+        required: true
+      mainParam2:
+        description: "Description for mainParam2"
+        type: string
+        required: true
+
+jobs:
+  call-child-workflows:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Call Child Workflow 1
+      uses: ./.github/workflows/child-workflow-1.yml
+      with:
+        param1: ${{ github.event.inputs.mainParam1 }}
+
+    - name: Call Child Workflow 2
+      uses: ./.github/workflows/child-workflow-2.yml
+      with:
+        param2: ${{ github.event.inputs.mainParam2 }}
