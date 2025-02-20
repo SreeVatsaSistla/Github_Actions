@@ -1,0 +1,15 @@
+name: Child Workflow 2
+
+on:
+  workflow_call:
+    inputs:
+      param2:
+        type: string
+        required: true
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print param2
+      run: echo " ${{ inputs.param2 }}"
