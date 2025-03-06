@@ -121,11 +121,6 @@ module "adf_iac_advanced" {
 | ------------------------ | -------------------- |
 | azurerm_data_factory.ADF | azurerm_data_factory |
 
-You can copy and paste this into your README.md file. If you need any more help, feel free to ask!
-
-Edit in Pages
-
-AI-generated content may be incorrect
 
 <!-- ## Contributing
 
